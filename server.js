@@ -26,14 +26,18 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use((req, res) =>{
-    res.render('maintenance.hbs');
-});
 
 app.get('/', (req, res) =>{
     res.render('home.hbs',{
         pageTitle: 'Home Page',
         welcomeMessage: "Hello. Welcome to the home page!"
+    });
+});
+
+app.get('/projects', (req, res) =>{
+    res.render('projects.hbs',{
+        pageTitle: 'Project Page',
+        welcomeMessage: "Hello. Welcome to the projects page!"
     });
 });
 
